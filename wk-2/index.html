@@ -1,0 +1,121 @@
+<!-- Tell the BOM this is HTML 5 -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- //ANCHOR -  Head Section for Meta Data -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 2 Demo Website</title>
+        
+        <style>
+                table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    }
+
+    caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+    }
+
+    thead,
+    tfoot {
+    background-color: rgb(228 240 245);
+    }
+
+    th,
+    td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    }
+
+    td:last-of-type {
+    text-align: center;
+    }
+
+    tbody > tr:nth-of-type(even) {
+    background-color: rgb(237 238 242);
+    }
+
+    tfoot th {
+    text-align: right;
+    }
+
+    tfoot td {
+    font-weight: bold;
+    }
+
+        </style>
+    </head>
+
+    <!-- //ANCHOR - Body Section for DOM Main content--> 
+    <!-- //TODO - Task build a basic webpage  -->
+    <body>
+        <h1>Hello World!</h1>
+        <h2>Hello World!</h2>
+        <h3>Hello World!</h3>
+        <h4>Hello World!</h4>
+        <p>This is a paragraph of <strong>some cool text.</strong></p>
+        <p>This is another section of <em>cool text</em></p>
+        <p>Try and break the line <br> of cool text </p>
+        <p>Let test <mark>mark</mark> and <small>small</small> of cool text </p>
+        <p>
+        This is the first sentence.
+        <small>This whole sentence is in small letters.</small>
+        </p>
+        <ul>
+            <li><mark>Dog</mark></li>
+            <li>Cat</li>
+            <li>Bird</li>
+        </ul>
+        <ol>
+            <li>Carrots</li>
+            <li>Lettuce</li>
+        </ol>
+
+    <table>
+    <caption>
+        I copied this from the MDN reference!
+    </caption>
+    <thead>
+        <tr>
+        <th scope="col">Person</th>
+        <th scope="col">Most interest in</th>
+        <th scope="col">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">Chris</th>
+        <td>HTML tables</td>
+        <td>22</td>
+        </tr>
+        <tr>
+        <th scope="row">Dennis</th>
+        <td>Web accessibility</td>
+        <td>45</td>
+        </tr>
+        <tr>
+        <th scope="row">Sarah</th>
+        <td>JavaScript frameworks</td>
+        <td>29</td>
+        </tr>
+        <tr>
+        <th scope="row">Karen</th>
+        <td>Web performance</td>
+        <td>36</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+        <th scope="row" colspan="2">Average age</th>
+        <td>33</td>
+        </tr>
+    </tfoot>
+    </table>
+    </body>
+</html>
