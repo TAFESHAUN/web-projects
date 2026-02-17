@@ -106,7 +106,7 @@ table th, table td {
 table th {
    background-color: #4ecdc4;
    color: white;
-   font-style: bold;
+   font-weight: bold;
    text-transform: uppercase;
 }
 
