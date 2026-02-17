@@ -6,27 +6,180 @@
    ========================================== */
 
 /* Step 2: Write CSS reset and body styles here */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.6;
+   color: #333;
+   background-color: #e7e6e6;
+}
 
 /* Step 3: Style the header here */
+header {
+   background-color: #ff6b6b;
+   color: white;
+   text-align: center;
+   padding: 25px 20px;
+   border-bottom: 5px solid #333;
+}
 
+header h1 {
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+}
+
+header p {
+   font-size: 1.2rem;
+   color: wheat;
+}
 
 /* Step 4: Style the navigation here */
+nav {
+   background-color: #d0d0d0;
+   padding: 15px;
+   text-align: center;
+}
 
+nav a {
+   color: white;
+   text-decoration: none;
+   padding: 10px 20px;
+   margin: 0 10px;
+   border-radius: 5px;
+   background-color: #45b7aa;
+   font-weight: bold;
+}
+
+nav a:hover {
+   background-color: #333;
+   font-style: italic;
+}
 
 /* Step 5: Style the main content area here */
-
+main {
+   background-color:  #018cc7;
+   max-width: 900px;
+   margin: 20px auto;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 2px 10px rgba(182, 53, 70, 0.854);
+}
 
 /* Step 6: Style the sections here */
+section {
+   margin-bottom: 30px;
+}
 
+section h2 {
+   color: coral;
+   margin-bottom: 15px;
+   font-size: 2rem;
+   border-bottom: 3px solid #333;
+   padding-bottom: 5px;
+}
+
+section p {
+   font-size: 1.1rem;
+   line-height: 1.8;
+}
 
 /* Step 7: Style the table here */
+table {
+   width: 100%;
+   border-collapse: collapse;
+    margin-top: 20px;
+}
 
+/* Defaults for TH and TD */
+table th, table td {
+   padding: 15px;
+   text-align: left;
+   border: 1px solid #ddd;
+}
+
+/* Custom TH */
+table th {
+   background-color: #4ecdc4;
+   color: white;
+   font-style: bold;
+   text-transform: uppercase;
+}
+
+table tbody tr:nth-child(odd) {
+   background-color: seagreen;
+}
+
+table tbody tr:nth-child(even) {
+   background-color: #ff6b6b;
+}
+
+table tbody tr:hover {
+   background-color:wheat;
+}
 
 /* Step 8: Style the form here */
+form {
+   margin-top: 20px;
+}
 
+label {
+   display: block;
+   margin-top: 15px;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #333;
+}
+
+input[type="text"], input[type="email"],
+input[type="tel"], select, textarea{
+   width: 100%;
+   padding: 12px;
+   border: 2px solid #ddd;
+   border-radius: 5px;
+   font-size: 1rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+   border-color: red;
+   outline: none;
+}
+
+textarea {
+   resize: vertical;
+}
+
+button {
+   margin-top: 20px;
+   padding: 15px 40px;
+   background-color: #ff6b6b;
+   border: none;
+   border-radius: 5px;
+   font-size: 1.1rem;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #ff0000;
+   color: white;
+}
 
 /* Step 9: Style the footer here */
-
+footer {
+   background-color: #333;
+   color: white;
+   text-align: center;
+   padding: 20px;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
 
 /* Step 10: Add responsive styles here (if time) */
