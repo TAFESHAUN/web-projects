@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet - Pawsome Pets</title>
+    
+    <!-- //TODO - Step 1: Link the CSS file here -->
+    
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <h1>🐾 Adopt a Pet</h1>
+        <p>Fill out the form below to start the adoption process</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Adopt a Pet</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        
+        <h2>Adoption Application Form</h2>
+
+        <form>
+            
+            <!-- Name Input -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email Input -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Phone Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <!-- Pet Selection Dropdown -->
+            <label for="pet">Which pet are you interested in?</label>
+            <select id="pet" name="pet">
+                <option value="">-- Select a Pet --</option>
+                <option value="buddy">Buddy - Golden Retriever</option>
+                <option value="luna">Luna - Tabby Cat</option>
+                <option value="max">Max - Beagle</option>
+                <option value="whiskers">Whiskers - Siamese Cat</option>
+            </select>
+
+            <!-- Message Textarea -->
+            <label for="message">Tell us why you want to adopt:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Application</button>
+            
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Pawsome Pets | All Rights Reserved</p>
+    </footer>
+
+    <!-- //TODO - Week 4: Link JavaScript file here -->
+
+</body>
+</html>
