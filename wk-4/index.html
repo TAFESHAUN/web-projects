@@ -18,10 +18,15 @@
     </header>
 
     <!-- NAVIGATION -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="contact.html">Adopt a Pet</a>
-        <a href="test.html">Test Page</a>
+    <nav id="navActive">
+        <button class="hamburger" 
+        onclick="document.getElementById('navActive').classList.toggle('active')">
+            ☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Adopt a Pet</a></li>
+            <li><a href="test.html">Test Page</a></li>
+        </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
