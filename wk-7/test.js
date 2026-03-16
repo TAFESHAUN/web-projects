@@ -18,22 +18,14 @@ petAge = 4;
 console.log(`I updated the age to ${petAge}`);
 
 
-/**
- * This is a test function for greeting users
- * Try a BUTTON event
- *
- * @param {*} greetmsg - This param is for greet msgs
- */
-function testGreet(greetmsg) {
+//Try a BUTTON event
+function testGreet() {
     let msg = "Welcome to Pawesome Pets"
 
     document.getElementById("tgreet").textContent = msg;
 }
 
-
-/** 
- * Function for testing USER updates to the page
- */
+//Function for testing USER updates to the page
 function ShowDOMmsg(){
     //console.log('Log if NEW BUTTON worked'); //Quick test to see if script is linked
     const today = new Date();
@@ -56,10 +48,6 @@ function ShowDOMmsg(){
 let pets = [];
 let editIndex = -1;
 
-
-/** 
- * This function event is for adding or updating a pet
- */
 function AddorUpdatePet() {
     //Read in values from my form
     let name = document.getElementById('petName').value;
@@ -111,6 +99,9 @@ function ClearForm(){
     //TODO - Make Cancel Appear when we fill out
     document.getElementById('cancelBtn').style.display = 'none'
 
+    //Reset button label back to Add Pet
+    document.querySelector('#petForm button').textContent = 'Add Pet';
+
     //Consider styling for active and non active
 }
 
@@ -133,12 +124,42 @@ function ShowPets(){
             <p>Type: ${pet.petType}</p>
             <p>Desc: ${pet.petDesc}</p>
             <p><strong>Date:</strong> ${pet.dateAdded}</p>
-            <br
+            <button onclick="EditPet(${i})">Edit</button>
+            <button onclick="DeletePet(${i})">Delete</button>
+            <br>
         </div>
         `;
     }
 
     document.getElementById('petList').innerHTML = htmlOutput;
+}
+
+function EditPet(index){
+    //Load the pet's details back into the form
+    let pet = pets[index];
+    document.getElementById('petName').value = pet.petName;
+    document.getElementById('petType').value = pet.petType;
+    document.getElementById('petDesc').value = pet.petDesc;
+
+    //Remember which pet we are editing
+    editIndex = index;
+
+    //Show the cancel button and update the Add button label
+    document.getElementById('cancelBtn').style.display = 'inline';
+    document.querySelector('#petForm button').textContent = 'Update Pet';
+
+    console.log('Editing pet at index:', index);
+}
+
+function DeletePet(index){
+    let deletedName = pets[index].petName;
+    pets.splice(index, 1); //Remove 1 item at position index
+    console.log('Deleted pet:', deletedName);
+    ShowPets(); //Re-draw the list
+}
+
+function CancelEdit(){
+    ClearForm(); //Reset everything back to Add mode
 }
 
 

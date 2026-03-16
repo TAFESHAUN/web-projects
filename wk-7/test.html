@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Adopt a Pet</a>
+        <a href="test.html">Test Page</a>
+    </nav>
+    
+    <button onclick="testGreet()">Test Hello</button>
+    <p id="tgreet">Default Test Page Here</p>
+
+    <button onclick="ShowDOMmsg()">Update the Page</button>
+    <p id="testOutput">Just another paragraph to do some testing</p>
+    
+    <br>
+    <!-- TODO PET MANAGER TEST SECTION-->
+    <h2>Pet Manager Test</h2>
+    <div id="petForm">
+        <label for="petName">Pet Name:</label>
+        <input type="text" id="petName" placeholder="Murphy">
+
+        <label for="petType">Type:</label>
+        <input type="text" id="petType" placeholder="Dog">
+
+        <label for="petDesc">Description</label>
+        <textarea id="petDesc" rows="4" placeholder="Please describe your pet...."></textarea>
+    
+        <button onclick="AddorUpdatePet()">Add Pet</button>
+        <button onclick="CancelEdit()" id="cancelBtn" style="display:none">Cancel</button>
+    </div>
+
+    <div id="petList">
+
+    </div>
+<script src="test.js">
+</script>
+</body>
+</html>
