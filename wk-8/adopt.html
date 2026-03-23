@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Manager - Pawsome Pets</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Pawsome Pets Adoption Center</h1>
+        <p>Find your perfect furry friend today!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="adopt.html">Pet Manager</a>
+        <a href="contact.html">Adopt a Pet</a>
+        <a href="test.html">Test Page</a>
+
+        <!-- Theme toggle -->
+        <button class="theme-toggle" type="button">Dark Theme</button>
+    </nav>
+
+    <main>
+        <div class="pet-manager-wrap">
+
+            <!-- ── Section 1: Add Pet Form ───────────────────── -->
+            <h2>Add a Pet for Adoption</h2>
+
+            <!--
+                The form id="addForm" is picked up by the DOMContentLoaded
+                listener in adopt.js, which calls addPet() on submit.
+                All inputs have matching id attributes that addPet() reads.
+            -->
+            <form id="addForm">
+
+                <!-- Pet name: required field, validated in addPet() -->
+                <label for="petName">Pet Name:</label>
+                <input type="text" id="petName" placeholder="e.g. Buddy" required>
+
+                <!-- Breed dropdown -->
+                <label for="petBreed">Breed:</label>
+                <select id="petBreed">
+                    <option value="">-- Select a Breed --</option>
+                    <option value="Beagle">Beagle</option>
+                    <option value="Border Collie">Border Collie</option>
+                    <option value="British Shorthair">British Shorthair</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Dachshund">Dachshund</option>
+                    <option value="Domestic Shorthair">Domestic Shorthair</option>
+                    <option value="French Bulldog">French Bulldog</option>
+                    <option value="German Shepherd">German Shepherd</option>
+                    <option value="Golden Retriever">Golden Retriever</option>
+                    <option value="Greyhound">Greyhound</option>
+                    <option value="Himalayan">Himalayan</option>
+                    <option value="Labrador Retriever">Labrador Retriever</option>
+                    <option value="Maine Coon">Maine Coon</option>
+                    <option value="Persian">Persian</option>
+                    <option value="Poodle">Poodle</option>
+                    <option value="Ragdoll">Ragdoll</option>
+                    <option value="Siamese">Siamese</option>
+                    <option value="Siberian Husky">Siberian Husky</option>
+                    <option value="Tabby">Tabby</option>
+                    <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                </select>
+
+                <!-- Age — optional, validated as a positive number -->
+                <label for="petAge">Age (years):</label>
+                <input type="number" id="petAge" min="0" max="30" placeholder="e.g. 3">
+
+                <!-- Free-text description — optional -->
+                <label for="petDesc">Description:</label>
+                <textarea id="petDesc" rows="3" placeholder="Describe the pet's personality..."></textarea>
+
+                <!-- Submit triggers the form's submit event listener in adopt.js -->
+                <button type="submit">Add Pet</button>
+
+            </form>
+
+            <!-- ── Section 2: Pet List ───────────────────────── -->
+            <h3>Available Pets</h3>
+
+            <!--
+                adopt.js injects pet cards here via updateDisplay().
+                Each card includes an "Adopt" button and a "Delete" button.
+            -->
+            <section id="petsList">
+                <!-- Cards are built dynamically by createPetCard() in adopt.js -->
+            </section>
+
+            <!-- ── Section 3: Search ─────────────────────────── -->
+            <h3>Search Pets by Name</h3>
+
+            <!--
+                The form id="searchForm" is picked up in adopt.js.
+                Submitting calls searchPet() which uses sequentialSearchAlgorithm.
+            -->
+            <form id="searchForm">
+                <label for="searchName">Pet Name:</label>
+                <input type="text" id="searchName" placeholder="Enter exact pet name...">
+                <button type="submit">Search</button>
+
+                <!-- Search results are written here by searchPet() -->
+                <div id="searchResult"></div>
+            </form>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Pawsome Pets | All Rights Reserved</p>
+    </footer>
+
+    <script src="adopt.js"></script>
+
+</body>
+</html>

@@ -137,7 +137,7 @@ label {
 }
 
 input[type="text"], input[type="email"],
-input[type="tel"], select, textarea{
+input[type="tel"], input[type="number"], select, textarea {
    width: 100%;
    padding: 12px;
    border: 2px solid #ddd;
@@ -254,5 +254,305 @@ nav ul li a:hover {
       border-radius: 0;
       padding: 15px 20px;
       border-bottom: 1px solid rgba(182, 53, 70, 0.854);
+   }
+}
+
+
+/* ==========================================
+   PET MANAGER lok at adopt.html 
+   ========================================== */
+
+/* Dark theme toggle button — sits inside nav alongside the nav links */
+.theme-toggle {
+   margin: 0 10px;
+   padding: 8px 18px;
+   background-color: #333;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   font-size: 0.95rem;
+   font-weight: bold;
+   cursor: pointer;
+   vertical-align: middle;
+}
+
+.theme-toggle:hover {
+   background-color: #45b7aa;
+   color: white;
+}
+
+/* Pet Manager page wrapper      */
+.pet-manager-wrap {
+   max-width: 900px;
+   margin: 20px auto 80px auto; /* extra bottom margin clears fixed footer */
+   padding: 30px;
+   background-color: #018cc7;
+   border-radius: 10px;
+   box-shadow: 0 2px 10px rgba(182, 53, 70, 0.854);
+}
+
+/* Section headings inside the pet manager — matches section h2 style */
+.pet-manager-wrap h2 {
+   color: coral;
+   border-bottom: 3px solid #333;
+   padding-bottom: 5px;
+   margin-bottom: 20px;
+   font-size: 2rem;
+}
+
+/* Sub-headings (Available Pets, Search) */
+.pet-manager-wrap h3 {
+   color: wheat;
+   margin: 30px 0 10px 0;
+   font-size: 1.4rem;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+   padding-bottom: 5px;
+}
+
+#addForm {
+   background-color: rgba(255, 255, 255, 0.12);
+   padding: 20px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+}
+
+/* Labels inside the add form need a lighter colour against the blue bg */
+#addForm label {
+   color: white;
+}
+
+
+.pet-card {
+   background-color: #f9f9f9;
+   border: 2px solid #ddd;
+   border-radius: 8px;
+   padding: 15px;
+   margin: 12px 0;
+}
+
+/* Summary line inside the card */
+.pet-card p {
+   font-size: 1rem;
+   line-height: 1.6;
+   color: #333;
+   margin: 0;
+}
+
+/* Optional description text — italicised and slightly muted */
+.pet-desc {
+   font-style: italic;
+   color: #666;
+   margin-top: 6px;
+   font-size: 0.95rem;
+}
+
+/* Green border + tinted background signals the pet has been adopted    */
+.pet-card.adopted {
+   background-color: #d4edda;
+   border-color: #28a745;
+   opacity: 0.9;
+}
+
+/* Strike through the details text to show the pet is no longer available */
+.pet-card.adopted p {
+   text-decoration: line-through;
+   color: #555;
+}
+
+/* Keep the description readable but still visually de-emphasised */
+.pet-card.adopted .pet-desc {
+   color: #777;
+}
+
+/* Action buttons row inside each card */
+.actions {
+   margin-top: 12px;
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap; /* wrap on small screens so buttons don't overflow */
+}
+
+/* Override the global button margin so card buttons sit flush in the row */
+.actions button {
+   margin-top: 0;
+   padding: 10px 24px;
+   font-size: 1rem;
+}
+
+/* Delete button uses a red accent to signal a destructive action */
+.delete-btn {
+   background-color: #ff6b6b;
+}
+
+.delete-btn:hover {
+   background-color: #cc0000;
+   color: white;
+}
+
+/* Empty state message */
+.empty-msg {
+   color: wheat;
+   font-style: italic;
+   text-align: center;
+   padding: 20px 0;
+   font-size: 1.1rem;
+}
+
+/*  Search form container */
+#searchForm {
+   background-color: rgba(255, 255, 255, 0.12);
+   padding: 20px;
+   border-radius: 8px;
+   margin-top: 10px;
+}
+
+#searchForm label {
+   color: white;
+}
+
+/* Result box — shows the matching pet details or "not found" message */
+#searchResult {
+   margin-top: 14px;
+   padding: 12px;
+   background-color: rgba(255, 255, 255, 0.18);
+   border-radius: 5px;
+   color: white;
+   font-weight: bold;
+   min-height: 40px;
+   font-size: 0.95rem;
+   line-height: 1.6;
+}
+
+/* Dark theme */
+/* Toggled by adopt.js adding/removing the "dark-theme" class on <body> */
+
+/* Main background and text */
+.dark-theme body {
+   background-color: #1a1a1a;
+   color: #f0f0f0;
+}
+
+/* Header darkens but keeps the coral brand feel */
+.dark-theme header {
+   background-color: #cc4444;
+}
+
+/* Nav darkens to charcoal */
+.dark-theme nav {
+   background-color: #2b2b2b;
+}
+
+/* Pet manager wrapper */
+.dark-theme .pet-manager-wrap {
+   background-color: #2b2b2b;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Sub-headings remain readable against the dark wrapper */
+.dark-theme .pet-manager-wrap h3 {
+   color: #4ecdc4;
+   border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Form backgrounds inside the dark wrapper */
+.dark-theme #addForm,
+.dark-theme #searchForm {
+   background-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Input and select fields */
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+   background-color: #3a3a3a;
+   color: #f0f0f0;
+   border-color: #555;
+}
+
+.dark-theme input:focus,
+.dark-theme select:focus,
+.dark-theme textarea:focus {
+   border-color: #4ecdc4;
+}
+
+/* Labels inside forms */
+.dark-theme label {
+   color: #ccc;
+}
+
+/* Pet cards */
+.dark-theme .pet-card {
+   background-color: #383838;
+   border-color: #555;
+}
+
+.dark-theme .pet-card p {
+   color: #f0f0f0;
+}
+
+.dark-theme .pet-desc {
+   color: #aaa;
+}
+
+/* Adopted cards in dark mode — keep the green signal but darken the tint */
+.dark-theme .pet-card.adopted {
+   background-color: #1e3a24;
+   border-color: #28a745;
+}
+
+.dark-theme .pet-card.adopted p {
+   color: #aaa;
+}
+
+.dark-theme .pet-card.adopted .pet-desc {
+   color: #888;
+}
+
+/* Empty state message */
+.dark-theme .empty-msg {
+   color: #4ecdc4;
+}
+
+/* Search result box */
+.dark-theme #searchResult {
+   background-color: rgba(255, 255, 255, 0.08);
+   color: #f0f0f0;
+}
+
+/* Theme toggle button in dark mode */
+.dark-theme .theme-toggle {
+   background-color: #45b7aa;
+   color: white;
+}
+
+.dark-theme .theme-toggle:hover {
+   background-color: #333;
+}
+
+/* Footer stays dark in both themes — it already is */
+.dark-theme footer {
+   background-color: #111;
+}
+
+/* ── Responsive — adopt.html on small screens ──────────────────────── */
+@media screen and (max-width: 600px) {
+   /* Stack the action buttons vertically on narrow viewports */
+   .actions {
+      flex-direction: column;
+   }
+
+   .actions button {
+      width: 100%;
+   }
+
+   /* Full-width search result box */
+   #searchResult {
+      font-size: 0.9rem;
+   }
+
+   /* Ensure the theme toggle wraps cleanly inside the nav on mobile */
+   .theme-toggle {
+      display: block;
+      margin: 10px auto 0 auto;
    }
 }
