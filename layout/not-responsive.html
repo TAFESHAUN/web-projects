@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- NO viewport meta tag here as it thinks is desined for a big screen -->
+  <title>My Cafe - Not Responsive</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #fdf6ec;
+      color: #3b2a1a;
+    }
+
+    /* Fixed pixel width won't shrink on mobile */
+    .navbar {
+      width: 960px;
+      background-color: #3b2a1a;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      color: #f5c842;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Nav links in a row will overflow on small screens */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Fixed width container causes horizontal scroll on mobile */
+    .container {
+      width: 960px;
+      margin: 0 auto;
+      padding: 40px 32px;
+    }
+
+    /* Hero section with fixed height */
+    .hero {
+      background-color: #3b2a1a;
+      color: white;
+      width: 960px;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #f5c842;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    /* Fixed 3-column grid will overflow on mobile */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .menu-card .emoji {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .menu-card h3 {
+      font-size: 20px;
+      color: #3b2a1a;
+      margin-bottom: 8px;
+    }
+
+    .menu-card p {
+      font-size: 14px;
+      color: #7a5c3a;
+      margin-bottom: 12px;
+    }
+
+    .menu-card .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #b5451b;
+    }
+
+    /* Fixed width button */
+    .btn {
+      display: block;
+      width: 200px;
+      margin: 40px auto;
+      background-color: #b5451b;
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .section-title {
+      font-size: 32px;
+      color: #3b2a1a;
+      margin-top: 48px;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      color: #7a5c3a;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    /* Fixed width footer */
+    footer {
+      background-color: #3b2a1a;
+      color: #f5c842;
+      width: 960px;
+      text-align: center;
+      padding: 24px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">☕ The Cozy Cup</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to The Cozy Cup</h1>
+    <p>Handcrafted coffee and pastries made fresh every morning.</p>
+  </section>
+
+  <!-- MENU SECTION -->
+  <div class="container">
+    <h2 class="section-title">Our Menu</h2>
+    <p class="section-subtitle">A little something for everyone.</p>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <span class="emoji">☕</span>
+        <h3>Flat White</h3>
+        <p>Silky smooth espresso with steamed milk.</p>
+        <div class="price">$5.50</div>
+      </div>
+
+      <div class="menu-card">
+        <span class="emoji">🍰</span>
+        <h3>Lemon Tart</h3>
+        <p>Zesty lemon curd in a buttery pastry shell.</p>
+        <div class="price">$6.00</div>
+      </div>
+
+      <div class="menu-card">
+        <span class="emoji">🧁</span>
+        <h3>Choc Muffin</h3>
+        <p>Double chocolate chip, baked fresh daily.</p>
+        <div class="price">$4.50</div>
+      </div>
+
+      <div class="menu-card">
+        <span class="emoji">🍵</span>
+        <h3>Matcha Latte</h3>
+        <p>Ceremonial grade matcha with oat milk.</p>
+        <div class="price">$6.50</div>
+      </div>
+
+      <div class="menu-card">
+        <span class="emoji">🥐</span>
+        <h3>Croissant</h3>
+        <p>Flaky, buttery, and perfectly golden.</p>
+        <div class="price">$4.00</div>
+      </div>
+
+      <div class="menu-card">
+        <span class="emoji">🍫</span>
+        <h3>Hot Chocolate</h3>
+        <p>Rich Belgian chocolate, steamed to perfection.</p>
+        <div class="price">$5.00</div>
+      </div>
+
+    </div>
+
+    <button class="btn">Order Now</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 The Cozy Cup — 42 Latte Lane, Sydney</p>
+  </footer>
+
+</body>
+</html>
